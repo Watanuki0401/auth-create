@@ -1,0 +1,23 @@
+{
+    "name": "Next-Auth app",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "next-js",
+    "workspaceFolder": "/workspace/auth-create",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bradlc.vscode-tailwindcss",
+                "Prisma.prisma"
+            ],
+            "settings": {
+                "files.associations": {
+                    "*.css": "tailwindcss"
+                },
+                "[prisma]": {
+                    "editor.defaultFormatter": "Prisma.prisma"
+                }
+            }
+        }
+    },
+    "remoteUser": "node"
+}

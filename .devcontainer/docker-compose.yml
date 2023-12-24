@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  next-js:
+    image: node:21.5.0-bullseye
+    #image: mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye
+    volumes:
+      - ../../:/workspace:cached
+    tty: true
+    ports:
+      - 3000:3000
+
+  db:
+    image: postgres:16.1-bullseye
+    volumes:
+      - ../DB:/var/lib/postgresql/data:cached
+    environment:
+      - POSTGRES_USER=CbU+niDi77IuGHRg
+      - POSTGRES_PASSWORD=cOlvuseHkofIyvQ3
+
