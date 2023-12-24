@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import Link from "next/link"
 
 export default function login() {
     return(
@@ -26,7 +27,7 @@ export default function login() {
                 <CardFooter>
                     <Button className="w-full">Login</Button>
                 </CardFooter>
-                    <p className="text-center">If you don't have an account, please <a href="/register">Sign up.</a></p>
+                    <p className="text-center">If you don't have an account, please <Link href="/register">Sign up.</Link></p>
             </Card>
         </div>
     )
