@@ -12,9 +12,10 @@ services:
 
   db:
     image: postgres:16.1-bullseye
-    volumes:
-      - ../DB:/var/lib/postgresql/data:cached
     environment:
       - POSTGRES_USER=CbU+niDi77IuGHRg
       - POSTGRES_PASSWORD=cOlvuseHkofIyvQ3
-
+    volumes:
+      - type: bind
+        source: ../data
+        target: /var/lib/postgresql/data
